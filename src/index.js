@@ -14,13 +14,12 @@ const feeling = (state = 0, action) => {
 }
 
 
-const storeInstance = createStore((
+const storeInstance = createStore(
     combineReducers(
         {
             feeling,
         }
-    )
-),
+    ),
     applyMiddleware(logger)
 )
 
