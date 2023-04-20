@@ -21,7 +21,7 @@ function StepOne() {
         } else { 
             alert('Feeling must be greater than 0.');
         }
-    };
+    }
 
     console.log(feeling);
 
@@ -32,8 +32,8 @@ function StepOne() {
             </header>
             <h2>How are you feeling today?</h2>
             <form onSubmit={nextPage}>
-                <input type="number" value={feeling} placeholder="Feeling" onChange={handleChange}/>
-                <input type="submit"  placeholder="Next"/>
+                <input type="number" value={feeling} onChange={handleChange}/>
+                <input type="submit" value="Next"/>
             </form>
         </div>
     )
