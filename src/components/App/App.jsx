@@ -30,7 +30,7 @@ function App() {
         <Route exact path="/step-four">
           <StepFour />
         </Route>
-        <Route>
+        <Route exact path="/review">
           <Review />
         </Route>
         <Route exact path="/thank-you">
