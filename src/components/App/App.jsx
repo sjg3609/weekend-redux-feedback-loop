@@ -7,6 +7,8 @@ import StepOne from '../Steps/StepOne';
 import StepTwo from '../Steps/StepTwo';
 import StepThree from '../Steps/StepThree';
 import StepFour from '../Steps/StepFour';
+import Review from '../Review/Review';
+import ThankYou from '../ThankYou/ThankYou';
 
 function App() {
 
@@ -25,8 +27,14 @@ function App() {
         <Route exact path="/step-three">
           <StepThree />
         </Route>
-        <Route exact path="step-four">
+        <Route exact path="/step-four">
           <StepFour />
+        </Route>
+        <Route>
+          <Review />
+        </Route>
+        <Route exact path="/thank-you">
+          <ThankYou />
         </Route>
       </Router>
     </div>
