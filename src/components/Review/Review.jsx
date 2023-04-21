@@ -13,7 +13,7 @@ function Review() {
     const comments = useSelector(store => store.comments);
 
     const submitFeedback = () => {
-        axios.post('/api/feelings', {
+        axios.post('/feedback', {
             feeling: feeling,
             understanding: understanding,
             support: support,

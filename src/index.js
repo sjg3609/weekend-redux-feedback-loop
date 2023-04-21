@@ -9,6 +9,8 @@ import { Provider } from 'react-redux';
 const feeling = (state = 0, action) => {
     if (action.type === 'SET_FEELING') {
         return action.payload;
+    } else if (action.type === 'CLEAR_FORMS') {
+        return 0;
     }
     return state;
 }
@@ -16,6 +18,8 @@ const feeling = (state = 0, action) => {
 const understanding = (state =0, action) => {
     if (action.type === 'SET_UNDERSTANDING') {
         return action.payload;
+    } else if (action.type === 'CLEAR_FORMS') {
+        return 0;
     }
     return state;
 }
@@ -23,6 +27,8 @@ const understanding = (state =0, action) => {
 const support = (state = 0, action) => {
     if (action.type === 'SET_SUPPORT') {
         return action.payload;
+    } else if (action.type === 'CLEAR_FORMS') {
+        return 0;
     }
     return state;
 }
@@ -30,6 +36,8 @@ const support = (state = 0, action) => {
 const comments = (state = '', action) => {
     if (action.type === 'SET_COMMENTS') {
         return action.payload;
+    } else if (action.type === 'CLEAR_FORMS') {
+        return '';
     }
     return state;
 }
