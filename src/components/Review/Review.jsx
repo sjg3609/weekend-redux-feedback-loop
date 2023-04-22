@@ -6,6 +6,7 @@ import axios from 'axios';
 
 function Review() {
 
+    const dispatch = useDispatch();
     const history = useHistory();
     const feeling = useSelector(store => store.feeling);
     const understanding = useSelector(store => store.understanding);
@@ -20,6 +21,7 @@ function Review() {
             comments: comments,
         }).then((response) => {
             console.log(response);
+            dispatch({ type: 'CLEAR_FORMS' });
             history.push('/thank-you');
         }).catch((error) => {
             console.log(`Error in POST submitFeedback: ${error}`);
