@@ -21,12 +21,15 @@ function Review() {
             comments: comments,
         }).then((response) => {
             console.log(response);
-            dispatch({ type: 'CLEAR_FORMS' });
             history.push('/thank-you');
         }).catch((error) => {
             console.log(`Error in POST submitFeedback: ${error}`);
             alert('Something went wrong.');
         })
+    }
+
+    const previousPage = () => {
+        history.push('/step-four');
     }
 
     return (
@@ -39,7 +42,10 @@ function Review() {
             <h3>Support: {support}</h3>
             <h3>Comments: {comments}</h3>
             <button onClick={submitFeedback}>Submit!</button>
+            <br />
+            <button onClick={previousPage}>Back</button>
         </>
+        
     )
 }
 
