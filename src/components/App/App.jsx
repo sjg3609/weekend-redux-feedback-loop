@@ -10,6 +10,17 @@ import StepFour from '../Steps/StepFour';
 import Review from '../Review/Review';
 import ThankYou from '../ThankYou/ThankYou';
 
+// import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       main: 'white',
+//     }
+//   }
+// });
+
+
 function App() {
 
   return (

@@ -1,6 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import axios from 'axios';
+import { Button, TextField } from '@mui/material';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 function StepOne() {
 
@@ -27,20 +28,21 @@ function StepOne() {
         return history.push('/')
     }
 
-    console.log(feeling);
 
     return (
         <div>
             <header className='App-header'>
                 <h1 className='App-title'>Feedback!</h1>
             </header>
+            <ProgressBar currentStep={0} />
             <h2>How are you feeling today?</h2>
             <form onSubmit={nextPage}>
-                <input type="number" value={feeling} onChange={handleChange}/>
-                <input type="submit" value="Next"/> 
+                <TextField variant="standard" type="number" value={feeling} onChange={handleChange}/>
+                {'       '}
+                <Button variant ="contained" type="submit">Next</Button> 
             </form>
             <br />
-            <button onClick={previousPage}>Back</button>
+            <Button variant="contained" onClick={previousPage}>Back</Button>
         </div>
     )
 }

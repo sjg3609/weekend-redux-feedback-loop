@@ -1,7 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { Button } from '@mui/material';
 import axios from 'axios';
-
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 
 function Review() {
@@ -37,15 +38,15 @@ function Review() {
             <header className='App-header'>
                 <h1 className='App-title'>Review Your Feedback!</h1>
             </header>
+            <ProgressBar currentStep={4} />
             <h3>Feeling: {feeling}</h3>
             <h3>Understanding: {understanding}</h3>
             <h3>Support: {support}</h3>
             <h3>Comments: {comments}</h3>
-            <button onClick={submitFeedback}>Submit!</button>
-            <br />
-            <button onClick={previousPage}>Back</button>
+            <Button variant="contained" onClick={previousPage}>Back</Button>
+            <Button variant="contained" onClick={submitFeedback}>Submit!</Button>
         </>
-        
+
     )
 }
 
