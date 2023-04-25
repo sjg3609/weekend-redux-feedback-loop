@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from 'react-router-dom';
+import { Button, TextField } from '@mui/material';
 
 
 
@@ -31,11 +32,12 @@ function StepFour() {
             </header>
             <h2>Any comments you want to leave?</h2>
             <form onSubmit={nextPage}>
-                <input type="text" value={comments} onChange={handleChange} />
-                <input type="submit" value="Next" />
+                <TextField variant="standard" type="text" value={comments} onChange={handleChange} />
+                {'          '}
+                <Button type="submit" variant="contained">Next</Button>
             </form>
             <br />
-            <button onClick={previousPage}>Back</button>
+            <Button variant ="contained" onClick={previousPage}>Back</Button>
         </>
     )
 }

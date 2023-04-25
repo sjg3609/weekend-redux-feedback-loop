@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from 'react-router-dom';
-
+import { Button, TextField } from '@mui/material';
 
 function StepTwo() {
 
@@ -33,11 +33,12 @@ function StepTwo() {
             </header>
             <h2>How well are you understanding the content?</h2>
             <form onSubmit={nextPage}>
-                <input type="number" onChange={handleChange} value={understanding} />
-                <input type="Submit" value="Next" />
+                <TextField variant="standard" type="number" value={understanding} onChange={handleChange}/>
+                {'       '}
+                <Button variant ="contained" type="submit">Next</Button> 
             </form>
             <br />
-            <button onClick={previousPage}>Back</button>
+            <Button variant="contained" onClick={previousPage}>Back</Button>
         </>
     )
 }

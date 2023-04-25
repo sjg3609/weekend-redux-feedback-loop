@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 
 function ThankYou() {
@@ -18,7 +19,7 @@ function ThankYou() {
             <header className='App-header'>
                 <h1 className='App-title'>Thank you!</h1>
             </header>
-            <button onClick={submitNewFeedback}>Submit New Feedback</button>
+            <Button variant="contained" onClick={submitNewFeedback}>Submit New Feedback</Button>
         </>
     )
 }
