@@ -22,6 +22,10 @@ function StepThree() {
         }
     }
 
+    const previousPage = () => {
+        history.push('/step-two');
+    }
+
     return (
         <>
             <header className='App-header'>
@@ -32,6 +36,8 @@ function StepThree() {
                 <input type="number" value={support} onChange={handleChange} />
                 <input type="submit" value='Next' />
             </form>
+            <br />
+            <button onClick={previousPage}>Back</button>
         </>
     )
 }

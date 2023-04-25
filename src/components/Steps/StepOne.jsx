@@ -23,6 +23,10 @@ function StepOne() {
         }
     }
 
+    const previousPage = () => {
+        return history.push('/')
+    }
+
     console.log(feeling);
 
     return (
@@ -33,8 +37,10 @@ function StepOne() {
             <h2>How are you feeling today?</h2>
             <form onSubmit={nextPage}>
                 <input type="number" value={feeling} onChange={handleChange}/>
-                <input type="submit" value="Next"/>
+                <input type="submit" value="Next"/> 
             </form>
+            <br />
+            <button onClick={previousPage}>Back</button>
         </div>
     )
 }

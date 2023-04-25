@@ -20,7 +20,9 @@ function StepFour() {
        history.push('/review');
     }
 
-
+    const previousPage = () => {
+        history.push('/step-three');
+    }
 
     return (
         <>
@@ -32,6 +34,8 @@ function StepFour() {
                 <input type="text" value={comments} onChange={handleChange} />
                 <input type="submit" value="Next" />
             </form>
+            <br />
+            <button onClick={previousPage}>Back</button>
         </>
     )
 }
