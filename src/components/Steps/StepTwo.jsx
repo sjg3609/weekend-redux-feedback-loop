@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from 'react-router-dom';
 import { Button, TextField } from '@mui/material';
+import ProgressBar from "../ProgressBar/ProgressBar";
 
 function StepTwo() {
 
@@ -31,6 +32,7 @@ function StepTwo() {
             <header className='App-header'>
                 <h1 className='App-title'>Feedback!</h1>
             </header>
+            <ProgressBar currentStep={1} />
             <h2>How well are you understanding the content?</h2>
             <form onSubmit={nextPage}>
                 <TextField variant="standard" type="number" value={understanding} onChange={handleChange}/>

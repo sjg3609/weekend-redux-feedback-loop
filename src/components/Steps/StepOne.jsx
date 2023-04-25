@@ -1,6 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { Button, TextField } from '@mui/material';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 function StepOne() {
 
@@ -33,6 +34,7 @@ function StepOne() {
             <header className='App-header'>
                 <h1 className='App-title'>Feedback!</h1>
             </header>
+            <ProgressBar currentStep={0} />
             <h2>How are you feeling today?</h2>
             <form onSubmit={nextPage}>
                 <TextField variant="standard" type="number" value={feeling} onChange={handleChange}/>
